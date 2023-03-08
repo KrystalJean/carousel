@@ -40,6 +40,10 @@ body {
     width: 100vw;
 }
 
+img {
+    padding-bottom: 20px;
+}
+
 .carousel {
     width: 90%;
     aspect-ratio: 2 /1.25;
@@ -49,8 +53,7 @@ body {
 }
 
 .viewbox {
-
-    overflow: scroll;   
+    overflow-x: scroll;   
 }
 
 .controls:hover {
@@ -66,4 +69,18 @@ body {
     font-size: 2em;
     text-align: left;
     padding: 0 10px 0 5px;
+}
+
+#prev-one, #next-one {
+    padding: 5px 8px;
+    border-radius: 50%;
+}
+
+#prev-scroll, #next-scroll {
+    padding: 8px 5px;
+    border-radius: 50%;
+}
+
+#prev-one:hover, #next-one:hover, #prev-scroll:hover, #next-scroll:hover  {
+    background-color: rgba(0, 255, 255, 0.1);
 }
