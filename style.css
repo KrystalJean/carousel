@@ -32,11 +32,15 @@
 body {
     background-color: #f1e9da;
     color: #94918b;
+
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+
     height: 100vh;
     width: 100vw;
 }
 
-.viewbox {
+.carousel {
     width: 90%;
     aspect-ratio: 2 /1.25;
     background-color: #fff;
@@ -44,6 +48,22 @@ body {
     padding: 5px;
 }
 
-.image-container {
+.viewbox {
+
     overflow: scroll;   
+}
+
+.controls:hover {
+    cursor: pointer;
+}
+.prev-controls {
+    font-size: 2em;
+    text-align:right;
+    padding: 0 5px 0 10px;
+}
+
+.next-controls {
+    font-size: 2em;
+    text-align: left;
+    padding: 0 10px 0 5px;
 }
