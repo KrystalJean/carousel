@@ -4,15 +4,16 @@ const prevScroll = document.getElementById('prev-scroll');
 const nextScroll = document.getElementById('next-scroll');
 const viewbox = document.getElementById('viewbox');
 const images = document.getElementsByClassName('image');
-const imageWidth = viewbox.scrollWidth / images.length
+const imageWidth = viewbox.scrollWidth  / images.length
 
-let lastImage = images.length - 1;
-
-
-console.log(viewbox.scrollLeft)
+// let lastImage = images.length - 1;
 
 
+function currentPos() {
+    console.log(viewbox.scrollLeft)   
+}
 
+nextScroll.addEventListener('mouseover', currentPos)
 
 
 
@@ -23,12 +24,12 @@ let nextScrollInterval;
 
 function setNextScrollInterval() {
     if (!nextScrollInterval) {
-        nextScrollInterval = setInterval(autoscrollNext, 1);
+        nextScrollInterval = setInterval(autoscrollNext, 20);
     }
 }
 
 function autoscrollNext() {
-    viewbox.scrollLeft += 1;
+    viewbox.scrollLeft += 2;
 }
 
 function clearNextScrollInterval() {
@@ -44,7 +45,7 @@ let prevScrollInterval;
 
 function setPrevScrollInterval() {
     if (!prevScrollInterval) {
-        prevScrollInterval = setInterval(autoscrollPrev, 1);
+        prevScrollInterval = setInterval(autoscrollPrev, 20);
     }
 }
 
@@ -57,11 +58,11 @@ function clearPrevScrollInterval() {
     prevScrollInterval = null;
 }
 
+// EVENT LISTENERS
 
-
-// prevOne.addEventListener('click', () => {
-//     viewbox.scrollLeft -= imageWidth;
-// });
+prevOne.addEventListener('click', () => {
+    viewbox.scrollLeft -= imageWidth;
+});
 
 nextOne.addEventListener('click', () => {
     viewbox.scrollLeft += imageWidth;

@@ -40,20 +40,27 @@ body {
     width: 100vw;
 }
 
-img {
-    padding-bottom: 20px;
-}
+/* img {
+} */
+
+/* img:not(:nth-child(0)) {
+    padding: 0 5px 20px 0px;
+    background-color: palegoldenrod;
+
+} */
 
 .carousel {
-    width: 90%;
+    width: 710px;
+    /* width: 90%; */
     aspect-ratio: 2 /1.25;
-    background-color: #fff;
+    background-color: #000;
     border-radius: 8px;
     padding: 5px;
 }
 
 .viewbox {
     overflow-x: scroll;   
+    /* width: 100%; */
 }
 
 .controls:hover {
