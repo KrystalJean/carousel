@@ -1,19 +1,31 @@
+const numImgToShow = 3;
+
 const prevOne = document.getElementById('prev-one');
 const nextOne = document.getElementById('next-one');
 const prevScroll = document.getElementById('prev-scroll');
 const nextScroll = document.getElementById('next-scroll');
+
 const viewbox = document.getElementById('viewbox');
-const images = document.getElementsByClassName('image');
-const imageWidth = viewbox.scrollWidth  / images.length
+const images = document.querySelectorAll('.image');
+const imageWidth = images[0].clientWidth;
 
-// let lastImage = images.length - 1;
+viewbox.style.width = `${imageWidth * numImgToShow}px`;
 
 
-function currentPos() {
-    console.log(viewbox.scrollLeft)   
-}
 
-nextScroll.addEventListener('mouseover', currentPos)
+// let imageArr = [];
+// images.forEach(image => {
+//     imageArr.push(image);
+// })
+// const shifted = imageArr.shift();
+// imageArr.push(shifted);
+
+// console.log(imageArr)
+
+
+
+
+
 
 
 
